@@ -1,0 +1,36 @@
+{
+    "settings": {
+        "default_dns_servers": [
+            "8.8.8.8",
+            "8.8.4.4"
+        ],
+        "enable_fallback": true,
+        "fallback_ips": {
+            "A": "127.0.0.1",
+            "AAAA": "::1"
+        },
+        "ttl": 60,
+        "enable_recursive_query": true,
+        "enable_cache": true,
+        "cache_ttl": 600
+    },
+    "records": {
+        "example.com": {
+            "A": ["93.184.216.34", "93.184.216.35"],
+            "AAAA": ["2606:2800:220:1:248:1893:25c8:1946"],
+            "MX": [
+                {"preference": 10, "exchange": "mail1.example.com"},
+                {"preference": 20, "exchange": "mail2.example.com"}
+            ],
+            "CNAME": ["www.example.com"]
+        },
+        "test.com": {
+            "A": ["192.0.2.1"],
+            "TTL": 300
+        },
+        "*.example.com": {
+            "A": ["93.184.216.36"],
+            "TTL": 120
+        }
+    }
+} 
